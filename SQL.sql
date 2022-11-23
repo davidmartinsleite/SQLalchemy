@@ -17,3 +17,13 @@ describe filmes;
 
 select * from filmes;
 
+CREATE TABLE IF NOT EXISTS atores (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    titulo_filme VARCHAR(50) NOT NULL,
+    PRIMARY KEY(id),
+    FOREIGN KEY (titulo_filme) REFERENCES filmes(titulo)
+);
+
+INSERT INTO atores (nome, titulo_filme)
+VALUE ("Tom Hanks", "Forest Gump");
