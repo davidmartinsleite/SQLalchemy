@@ -10,7 +10,7 @@ class Filmes(Base):
     genero = Column(String, nullable=False)
     ano = Column(Integer, nullable=False)
     atores = relationship('Atores', backref='atores', lazy='subquery')
-    # relationship('nome da tabela(classe)', 'referencia reversa',
+    # relationship('nome da tabela(classe)', 'referencia reversa')
 
     def __repr__(self):
         return f'Filme (titulo = {self.titulo}, ano= {self.ano})'
